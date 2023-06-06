@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Providers;
+//use Laravel\Passport\Passport;
 
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -22,5 +23,10 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+       // Passport::routes();
+       //Passport::routes();
+      //  Passport::loadKeysFrom(__DIR__.'/../secrets/oauth');
+
+
     }
 }

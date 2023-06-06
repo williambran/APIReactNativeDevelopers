@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PostFactory extends Factory
 {
+  //  protected $model = Post::class;
     /**
      * Define the model's default state.
      *
@@ -18,6 +19,11 @@ class PostFactory extends Factory
     {
         return [
             //
+            'user_id' => rand(1,2),
+            'title' => $this->faker->sentence,
+            'content' => $this->faker->text(500),
+            'longitude' => $this->faker->longitude,
+            'latitude' => $this->faker->latitude
         ];
     }
 }

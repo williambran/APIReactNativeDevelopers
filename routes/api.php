@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('v1/posts',App\Http\Controllers\Api\V1\PostController::class)
+->only('show', 'index', 'destroy','store','update');
+//->middleware('auth:api');
+
+
+Route::post('v1/login', [App\Http\Controllers\Api\LoginController::class,'login']);
